@@ -1,0 +1,27 @@
+1 . boot02 부트 프로젝트 net.daum.vo에서 BoardVO.java엔티티빈 클래스를 설계하면서
+tbl_boards2테이블과 bno_seq2 시퀀스를 생성함.
+
+2. net.daum.dao패키지에서 BoardRepository.java 생성
+
+3.src/test/java/net/daum 패키지에서 BoardRepositoryTests.java JUnit 테스트 연습
+클래스를 만들어서 JPA를 통해서 레코드 저장,수정,검색,삭제를 함.
+
+4. boot03 부트 프로젝트 net.daum.vo에서 BoardVO.java엔티티빈 클래스를 이전 boot02
+에서 가져옴.
+
+5.  net.daum.dao패키지에서 BoardRepository.java 생성
+    가.각 쿼리메서드 작성
+6. src/test/java/net/daum 패키지에서 Boot03ApplicationTests.java에서
+   가. 20개의 샘플 데이터 저장
+   나. 게시판 제목..:7로 레코드 검색
+   다.글쓴이로 검색
+   라. 글쓴이에서 '05'가 포함된 게시물 검색 : '%'+05'%' like 검색
+   마.제목에 '2'가 포함되거나 내용에 '5'가 포함된 경우,
+       제목에 '5'가 포함되어 있고 게시물 번호가 2보다 큰 자료 검색
+       번호가 10보다 큰 자료를 내림차순 정렬
+       this.boardRepo.findByTitle("제목"); // 제목이 들어간 자료 검색
+       @Param 내용에 대한 검색 처리
+       this.boardRepo.findByTitle2("7") //원하는 컬럼만 검색
+
+7. boot04 부트 프로젝트 net.daum.vo에서 MemberVO.java 엔티티빈 클래스
+생성하고, Profile.java 하는 중
